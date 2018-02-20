@@ -20,30 +20,15 @@ Route::group(['prefix' => 'api'], function ()
 {
     Route::group(['prefix' => 'user'], function ()
     {
-        Route::get('', function()
-        {
-            return 'devolver todos usuarios';
-        });
+        Route::get('', ['uses' => 'UserController@allUsers' ]);
 
-        Route::get('{id}', function($id)
-        {
-            return 'devolver o usuario de ID ' . $id;
-        });
+        Route::get('{id}', ['uses' => 'UserController@getUser' ]);
 
-        Route::post('', function()
-        {
-            return 'criar um novo usuário baseado na informação recebida';
-        });
+        Route::post('', ['uses' => 'UserController@saveUser' ]);
 
-        Route::put('{id}', function($id)
-        {
-            return 'Atualizar o usuário de ID ' . $id;
-        });
+        Route::put('{id}', ['uses' => 'UserController@updateUser' ]);
 
-        Route::delete('{id}', function($id)
-        {
-            return 'Remover o usuário de ID ' . $id;
-        });
+        Route::delete('{id}', ['uses' => 'UserController@deleteUsers' ]);
 
 
 
