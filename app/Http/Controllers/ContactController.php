@@ -1,8 +1,9 @@
 <?php
 
 use App\Business\ContactBusiness;
+use App\Http\Controllers\Controller;
 
-class ContactController extends BaseController
+class ContactController extends Controller
 {
     private $contact;
 

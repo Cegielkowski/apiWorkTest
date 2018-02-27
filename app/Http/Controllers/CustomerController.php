@@ -1,8 +1,9 @@
 <?php
 
 use App\Business\CustomerBusiness;
+use App\Http\Controllers\Controller;
 
-Class CustomerController extends BaseController
+Class CustomerController extends Controller
 {
     private $customer;
 
@@ -11,9 +12,10 @@ Class CustomerController extends BaseController
         $this->customer = $customer;
     }
 
-
     public function allCustomers(){
+
         $this->customer->allCustomers();
+        return 'Oi';
     }
 
     public function getCustomer ($id){

@@ -4,7 +4,7 @@ namespace App\Business;
 Class CustomerBusiness
 {
     public function allCustomers(){
-
+        return('Tudo ok');
     }
 
     public function getCustomer ($id){
