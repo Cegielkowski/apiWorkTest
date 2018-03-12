@@ -1,10 +1,21 @@
 <?php
 namespace App\Business;
+use App\Model;
+use App\Repositories\CustomerRepository;
 
 Class CustomerBusiness
 {
+
+    /**
+     * CustomerBusiness constructor.
+     */
+    public function __construct( CustomerRepository $customer)
+    {
+        $this->customer = $customer;
+    }
+
     public function allCustomers(){
-        return('Tudo ok');
+        return $this->customer->listAll();
     }
 
     public function getCustomer ($id){

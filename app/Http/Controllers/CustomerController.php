@@ -1,7 +1,8 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use App\Business\CustomerBusiness;
-use App\Http\Controllers\Controller;
 
 Class CustomerController extends Controller
 {
@@ -14,8 +15,7 @@ Class CustomerController extends Controller
 
     public function allCustomers(){
 
-        $this->customer->allCustomers();
-        return 'Oi';
+     return  $this->customer->allCustomers();
     }
 
     public function getCustomer ($id){

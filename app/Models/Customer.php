@@ -1,15 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    protected $fillable = ['name', 'email', 'website', 'logo', 'password'];
+    protected $table = 'customer';
 
-    protected $hidden = ['password'];
+    protected $primaryKey = 'id';
 
-    protected $dates = ['deleted_at'];
+    public $timestamps = false;
 
+    protected $connection = 'localhost';
 }
